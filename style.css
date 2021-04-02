@@ -1,0 +1,149 @@
+#hangman {
+    /*display: flex;
+    flex-direction: row;*/
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: scale(2);
+  }
+  #wrongLetterBlock::before {
+    content: "Wrong Characters";
+    display: block;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+  }
+  #wrongLetterBlock {
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  #correctLetterBlock {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  [data-ns-test="letter"] {
+    display: inline-grid;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 2.5rem;
+    height: auto;
+    position: relative;
+    padding-bottom: 0.2rem;
+  }
+  [data-ns-test="letter"]::after {
+    content: "";
+    display: inline-grid;
+    position: absolute;
+    bottom: 0;
+    width: 2rem;
+    height: auto;
+    border-top: 0.1rem solid blue;
+  }
+  #showMessage,
+  #play {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: blue;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* ================================================================================================================================ */
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(26, 28, 63);
+    transition: background-color 2s linear;
+  }
+  
+  .heading-content {
+    text-align: center;
+    font-size: larger;
+    padding-top: 20px;
+    color: rgb(185, 177, 177);
+  }
+  
+  .heading {
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: rgb(185, 177, 177);
+  }
+  
+  .correct {
+    position: absolute;
+    top: 75%;
+    left: 15%;
+    color: white;
+  }
+  
+  .Wrong {
+    display: none;
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    font-size: x-large;
+    color: rgb(185, 177, 177);
+  }
+  
+  span {
+    padding: 5px;
+  }
+  
+  .popUp {
+    position: relative;
+    display: none;
+    z-index: 1;
+    background-color: darkblue;
+    margin: 15% auto;
+    text-align: center;
+    border: 2px solid darkblue;
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  
+  #result {
+    margin: 50px;
+    font-size: larger;
+    color: white;
+  }
+  
+  button {
+    color: white;
+    background-color: blue;
+    height: 30px;
+    width: 100px;
+  }
+  
+  .message {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 40%;
+    text-align: center;
+    border: 1px solid black;
+    color: white;
+    font-size: larger;
+    background-color: darkblue;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+  }
