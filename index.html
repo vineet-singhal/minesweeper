@@ -4,31 +4,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Hangman</title>
+    <title>Minesweeper</title>
 </head>
 <body>
-    <!-- For hangman -->
-    <div class="heading">Hangman</div>
-  <p class="heading-content">Find the hidden word - enter a letter!</p>
   <div class="container">
-    <svg
-      height="200"
-      width="300"
-      id="hangman"
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-    ></svg>
+    <div class="grid"></div>
+    <div>Flags left: <span id="flagsLeft"></span></div>
+    <div id="result"></div>
   </div>
-
-    <section class="Wrong">
-      <h3 id="wrng-heading">Wrong</h3>
-    </section>
-    <div class="correct"></div>
-    <div class="popUp">
-      <p id="result"></p>
-      <button data-ns-test="play-button" onclick="start()">Play Again</button>
-    </div>
-    <div class="message">You have already entered this letter!</div>
 </body>
 <script src="app.js"></script>
 </html>
